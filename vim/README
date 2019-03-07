@@ -1,0 +1,5 @@
+# 配置vim步骤
+1. ln -s ${root}/vim/vimrc ~/.vimrc
+2. ln -s ${root}/vim ~/.vim
+3. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+

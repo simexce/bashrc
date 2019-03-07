@@ -1,0 +1,79 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+"beautify
+Plugin 'vim-airline/vim-airline'
+Plugin 'dracula/vim'
+
+"annotation
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+
+"overview
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'majutsushi/tagbar'
+
+call vundle#end()
+filetype plugin indent on
+
+"beautify
+syntax enable
+colorscheme dracula 
+set background=dark
+
+set cursorline
+set t_Co=256
+
+"basic
+set nobackup
+set noswapfile
+
+set mouse=a
+
+set backspace=indent,eol,start
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+set number
+
+set showmode
+set showcmd
+set wildmenu
+
+set showmatch
+
+set foldenable
+set foldmethod=indent
+set foldlevelstart=99
+
+let mapleader=','
+
+"annotation
+let g:NERDSpaceDelims=1
+
+nmap <Leader>ch :DoxAuthor<CR>
+nmap <Leader>cf :Dox<CR>
+
+
+"overview
+let g:neocomplete#enable_at_startup=1
+
+let Tlist_Show_OneFile=1
+let Tlist_Exit_OnlyWindow=1
+map <F8> :TlistToggle<CR>
+
+let g:indentLine_char='¦'
+let g:indentLine_enabled=1
+let g:indentLine_color_term = 246
+
+let g:tagbar_width=30
+let g:tagbar_sort=0
+nmap <F7> :TagbarToggle<CR>
